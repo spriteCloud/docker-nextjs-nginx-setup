@@ -18,6 +18,12 @@ Start with the command
 ```
 docker-compose up -d
 ```
+
+Now the web app can be reached at
+```
+https://localhost
+```
+
 Stop with the command
 ```
 docker-compose down
