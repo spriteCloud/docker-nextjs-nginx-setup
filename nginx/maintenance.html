@@ -1,0 +1,212 @@
+<html lang="en" add_header Access-Control-Allow-Origin *;>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Calliope Maintenance</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<style>
+    html, body {
+        position: relative;
+        background: #2A3F54;
+        font-family: Arial, "Droid Sans", sans-serif;
+        font-weight: 400;
+        line-height: 1.471;
+        min-height: 100%;
+        width: 100%;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .main-svg {
+        height: 410px;
+    }
+
+    .letter--c {
+        display: inline-block;
+        text-color: blue;
+        width: 300px;
+        height: 300px;
+        stroke: #038DCD;
+        fill: #038DCD;
+        stroke-width: 5px;
+        transition: 1s;
+    }
+
+    .Container {
+        text-align: center;
+        position: relative;
+    }
+
+    .MainTitle {
+        display: block;
+        font-size: 2rem;
+        font-weight: lighter;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .MainGraphic {
+        position: relative;
+    }
+
+    .Cog {
+        fill: #aeb0b3;
+        overflow: visible;
+    }
+
+    #spinning-wheel {
+        animation: CogAnimation 5s linear infinite;
+        transform-origin: 50% 50%;
+    }
+
+    @keyframes CogAnimation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    #refresh {
+        width: 200px;
+        height: 50px;
+        font-size: 10px;
+        color: white;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        text-align: left;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+</style>
+
+<div class="Container">
+    <div id="refresh"> Refreshing in 30 seconds...</div>
+    <h1 class="MainTitle">
+        Calliope Maintenance
+    </h1>
+
+    <div class="MainGraphic">
+
+        <svg class="main-svg">
+            <g class="letter--c" transform="translate(-10, 0) scale(0.04)">
+                <path d="M3488 6924
+                c-2 -1 -39 -5 -83 -9 -84 -6 -116 -10 -205 -25 -30 -5
+          -73 -12 -95 -16 -22 -3 -85 -17 -140 -30 -586 -145 -1106 -436 -1525 -854
+          -124 -123 -155 -158 -265 -295 -154 -191 -361 -542 -463 -785 -73 -172 -166
+          -465 -197 -620 -30 -151 -61 -363 -73 -499 -15 -179 -7 -604 14 -751 13 -87
+          30 -192 39 -240 3 -14 7 -34 9 -45 2 -11 9 -40 16 -65 7 -25 14 -55 16 -68 6
+          -30 72 -252 83 -277 5 -11 24 -58 41 -105 165 -437 429 -858 720 -1151 278
+          -279 484 -439 803 -620 76 -44 140 -79 142 -79 3 0 37 -16 77 -36 144 -71 313
+          -132 538 -194 49 -14 178 -39 236 -45 26 -4 51 -8 54 -10 3 -2 44 -7 90 -10
+          47 -4 119 -11 160 -15 78 -8 500 -6 535 3 11 3 49 8 85 12 36 4 67 8 70 10 3
+          2 26 6 51 9 35 5 272 61 334 79 809 241 1503 795 1937 1548 59 101 70 133 70
+          202 0 100 -19 163 -71 234 -100 137 -324 181 -449 87 -48 -36 -51 -41 -119
+          -159 -200 -352 -462 -637 -828 -900 -110 -79 -376 -220 -515 -273 -93 -35
+          -170 -62 -173 -60 -1 1 -18 -4 -37 -10 -19 -6 -46 -13 -60 -16 -14 -2 -54 -11
+          -90 -20 -36 -8 -87 -18 -115 -21 -27 -4 -61 -8 -75 -10 -150 -22 -518 -22
+          -634 1 -10 2 -42 6 -70 8 -123 13 -326 64 -483 122 -87 32 -365 163 -418 196
+          -10 7 -58 38 -105 67 -47 30 -89 58 -95 63 -240 188 -402 352 -565 573 -64 86
+          -128 184 -160 243 -8 15 -36 66 -62 112 -136 246 -266 624 -304 889 -4 25 -8
+          55 -10 66 -32 173 -24 627 16 825 5 25 12 67 15 94 5 37 44 189 80 316 51 178
+          191 469 321 667 314 476 746 825 1269 1025 72 27 137 51 145 53 8 2 47 13 85
+          24 123 34 268 60 430 76 116 12 401 6 515 -10 14 -2 45 -7 70 -10 424 -57 834
+          -241 1210 -544 107 -86 300 -274 379 -370 58 -70 154 -213 186 -276 33 -65
+          123 -149 180 -169 167 -57 305 -15 404 123 60 85 81 230 45 322 -42 107 -177
+          309 -315 467 -105 121 -293 311 -379 382 -36 30 -67 57 -70 60 -12 13 -180
+          140 -240 181 -359 246 -729 405 -1139 490 -126 26 -150 30 -261 43 -30 3 -77
+          9 -105 12 -50 6 -472 14 -477 8z"/>
+            </g>
+
+            <svg class="Cog" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" x="50" y="50" width="180"
+                 height="180"> <!--transform="rotate(90)"-->
+                <g id="spinning-wheel">
+                    <path d="
+            M29.18 19.07
+            c-1.678-2.908-.668-6.634 2.256-8.328
+            L28.29 5.295
+            c-.897.527-1.942.83-3.057.83-3.36 0-6.085-2.743-6.085-6.126
+            h-6.29
+            c.01 1.043-.25 2.102-.81 3.07-1.68 2.907-5.41 3.896-8.34 2.21
+            L.566 10.727
+            c.905.515 1.69 1.268 2.246 2.234 1.677 2.904.673 6.624-2.24 8.32l3.145 5.447
+            c.895-.522 1.935-.82 3.044-.82 3.35 0 6.066 2.725 6.083 6.092
+            h6.29
+            c-.004-1.035.258-2.08.81-3.04 1.676-2.902 5.4-3.893 8.325-2.218l3.145-5.447
+            c-.9-.515-1.678-1.266-2.232-2.226
+            z
+            M16 22.48
+            c-3.578 0-6.48-2.902-6.48-6.48
+            S12.423 9.52 16 9.52
+            c3.578 0 6.48 2.902 6.48 6.48
+            s-2.902 6.48-6.48 6.48
+            z"/>
+                </g>
+            </svg>
+        </svg>
+
+    </div>
+
+
+    <h1 class="MainTitle">
+        Hurray, we are working on a new release!
+    </h1>
+    <p class="Main Description">
+        This should not be long so please try again after your well earned coffee break...
+    </p>
+
+</div>
+
+</body>
+
+</html>
+
+<script>
+    let index = 0;
+    $(document).ready(function () {
+        $("#refresh").html("Refreshing in 30 seconds.")
+        setTimeout("loop()", 30000)
+    });
+
+    function loop() {
+        $("#refresh").html("Refreshing...")
+        $.ajax({
+            url: window.location.href,
+            timeout: 5000,
+        })
+            .done(function () {
+                location.reload()
+            })
+            .fail(function (jqXHR) {
+                    index++;
+                    if (index > 10) {
+                        location.reload()
+                    } else {
+                        if (jqXHR.status > 501 && jqXHR.status < 505) {
+                            $("#refresh").html("Retrying connection in 30 seconds...")
+                            setTimeout("loop()", 30000)
+                        } else {
+                            location.reload()
+                        }
+
+                    }
+                }
+            )
+    }
+
+    window._slaaskSettings = {
+        key: "5ed26c143e2c3d63da12c4d15132bea2",
+    };
+</script>
+<script src="https://cdn.slaask.com/chat_loader.js" async="true"></script>

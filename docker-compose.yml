@@ -1,0 +1,32 @@
+version: '3'
+services:
+  nextjs:
+    restart: always
+    image: acme101/nextjs-hello-world:latest
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    environment:
+      - PORT=8080
+    expose:
+      - 8080
+  nginx:
+    build: ./nginx
+    image: nginx:test123
+    links:
+      - nextjs
+    ports:
+      - 80:80
+      - 443:443
+  mysql:
+    image: mysql:8.0.19
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=mypassword
+      - MYSQL_DATABASE=mydatabase
+    volumes:
+      - ./db-data:/var/lib/mysql
+    ports:
+      - 3306:3306
